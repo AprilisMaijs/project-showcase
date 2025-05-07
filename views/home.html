@@ -1,0 +1,6 @@
+<input ng-model="search" placeholder="Search projects...">
+<ul>
+  <li ng-repeat="project in projects | filter:search">
+    <a href="#!/project/{{project.id}}">{{ project.name }}</a>
+  </li>
+</ul>

@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "Weather App",
+      "description": "A simple app using the OpenWeather API to display weather by city."
+    },
+    {
+      "id": "2",
+      "name": "Portfolio Website",
+      "description": "A personal portfolio site showcasing my design and development work."
+    }
+  ]
+}
