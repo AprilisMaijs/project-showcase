@@ -1,6 +1,15 @@
-<input ng-model="search" placeholder="Search projects...">
-<ul>
-  <li ng-repeat="project in projects | filter:search">
-    <a href="#!/project/{{project.id}}">{{ project.name }}</a>
-  </li>
-</ul>
+<div class="mb-4">
+  <input ng-model="searchTerm" class="form-control" placeholder="Search projects...">
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-lg-4 mb-4" ng-repeat="project in projects | filter:{ name: searchTerm }">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">{{ project.name }}</h5>
+        <p class="card-text">{{ project.description | limitTo: 100 }}...</p>
+        <a class="btn btn-primary" href="#!/project/{{project.id}}">View Details</a>
+      </div>
+    </div>
+  </div>
+</div>
